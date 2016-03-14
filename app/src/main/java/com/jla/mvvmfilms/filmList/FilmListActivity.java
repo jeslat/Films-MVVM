@@ -16,7 +16,7 @@ public class FilmListActivity extends ActivityBase {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FilmListActivityBinding dataBinding = DataBindingUtil.setContentView(this, R.layout.film_list_activity);
-        dataBinding.setViewModel((FilmListViewModel) viewModel);
+        dataBinding.setListViewModel((FilmListViewModel) viewModel);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.jla.mvvmfilms.service;
+package com.jla.mvvmfilms.service.callback;
 
 import com.jla.mvvmfilms.model.Film;
 

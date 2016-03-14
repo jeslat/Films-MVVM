@@ -8,7 +8,7 @@
     <data>
 
         <variable
-            name="viewModel"
+            name="listViewModel"
             type="com.jla.mvvmfilms.filmList.FilmListViewModel"
             />
 
@@ -43,10 +43,10 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/toolbar_wrapper"
             android:scrollbars="vertical"
-            app:itemView="@{viewModel.itemView}"
-            app:items="@{viewModel.films}"
+            app:itemView="@{listViewModel.itemView}"
+            app:items="@{listViewModel.films}"
             app:layoutManager="@{LayoutManagers.linear()}"
-            app:onItemSelected="@{viewModel.onItemSelected}"
+            app:onItemSelected="@{listViewModel.onItemSelected}"
             />
 
         <ProgressBar

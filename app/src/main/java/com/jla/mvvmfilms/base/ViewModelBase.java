@@ -1,10 +1,13 @@
 package com.jla.mvvmfilms.base;
 
-import android.databinding.BaseObservable;
+import android.os.Bundle;
 
 public class ViewModelBase {
 
     public void onCreate() {
+    }
+
+    public void onCreate(Bundle bundle) {
     }
 
     public void onDestroy() {

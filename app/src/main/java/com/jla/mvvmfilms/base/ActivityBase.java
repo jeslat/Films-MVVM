@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 public abstract class ActivityBase extends AppCompatActivity {
 
     protected ViewModelBase viewModel;
-    private ViewDataBinding dataBinding;
 
     protected abstract ViewModelBase getViewModel();
 
@@ -16,7 +15,13 @@ public abstract class ActivityBase extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = getViewModel();
-        viewModel.onCreate();
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            viewModel.onCreate(bundle);
+        } else {
+            viewModel.onCreate();
+        }
     }
 
     @Override

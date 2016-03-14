@@ -6,7 +6,7 @@ import com.jla.mvvmfilms.base.ViewModelBase;
 import com.jla.mvvmfilms.filmDetail.FilmDetailNavigator;
 import com.jla.mvvmfilms.model.Film;
 import com.jla.mvvmfilms.service.FilmService;
-import com.jla.mvvmfilms.service.PopularFilmsCallback;
+import com.jla.mvvmfilms.service.callback.PopularFilmsCallback;
 import com.jla.mvvmfilms.util.CustomBindingAdapters.OnItemSelected;
 
 import android.content.Context;

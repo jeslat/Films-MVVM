@@ -1,15 +1,25 @@
 package com.jla.mvvmfilms.filmDetail;
 
+import com.jla.mvvmfilms.MvvmFilmsApplication;
 import com.jla.mvvmfilms.R;
+import com.jla.mvvmfilms.base.ActivityBase;
+import com.jla.mvvmfilms.base.ViewModelBase;
+import com.jla.mvvmfilms.databinding.FilmDetailActivityBinding;
 
-import android.support.v7.app.AppCompatActivity;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 
-public class FilmDetailActivity extends AppCompatActivity {
+public class FilmDetailActivity extends ActivityBase {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.film_detail_activity);
+        FilmDetailActivityBinding dataBinding = DataBindingUtil.setContentView(this, R.layout.film_detail_activity);
+        dataBinding.setDetailViewModel((FilmDetailViewModel) viewModel);
+    }
+
+    @Override
+    protected ViewModelBase getViewModel() {
+        return new FilmDetailViewModel(MvvmFilmsApplication.getInstance().getFilmService(), this);
     }
 }

@@ -1,5 +1,6 @@
-package com.jla.mvvmfilms.service;
+package com.jla.mvvmfilms.service.job;
 
+import com.jla.mvvmfilms.service.callback.PopularFilmsCallback;
 import com.jla.mvvmfilms.service.api.TheMovieDbAdapter;
 import com.jla.mvvmfilms.service.api.TheMovieDbService;
 import com.jla.mvvmfilms.service.api.mapper.FilmResponseDataMapper;
@@ -13,8 +14,6 @@ import java.util.List;
 
 public class GetPopularFilmsJob extends Job {
 
-    private static final String API_KEY = "20ffea664862269a108e69164352dcd8";
-    private static final String TAG = "GetPopularFilmsJob";
     private static final int PRIORITY = 1;
     private final PopularFilmsCallback callback;
 
@@ -31,8 +30,8 @@ public class GetPopularFilmsJob extends Job {
     public void onRun() throws Throwable {
         try {
             TheMovieDbService theMovieDbService = new TheMovieDbAdapter().create();
-            ConfigurationResponse configurationResponse = theMovieDbService.getConfiguration(API_KEY);
-            PopularFilmsResponse popularFilmsResponse = theMovieDbService.getPopularMovies(API_KEY, 1);
+            ConfigurationResponse configurationResponse = theMovieDbService.getConfiguration(TheMovieDbService.API_KEY);
+            PopularFilmsResponse popularFilmsResponse = theMovieDbService.getPopularMovies(TheMovieDbService.API_KEY, 1);
             List<Film> popularFilms = FilmResponseDataMapper
                     .transform(popularFilmsResponse.getPopularFilms(), configurationResponse.getImages());
             callback.setPopularFilms(popularFilms);
