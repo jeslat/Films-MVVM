@@ -46,6 +46,7 @@
             app:itemView="@{viewModel.itemView}"
             app:items="@{viewModel.films}"
             app:layoutManager="@{LayoutManagers.linear()}"
+            app:onItemSelected="@{viewModel.onItemSelected}"
             />
 
         <ProgressBar

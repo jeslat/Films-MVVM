@@ -1,7 +1,7 @@
-package com.jla.mvvmfilms.api;
+package com.jla.mvvmfilms.service.api;
 
-import com.jla.mvvmfilms.api.model.ConfigurationResponse;
-import com.jla.mvvmfilms.api.model.PopularFilmsResponse;
+import com.jla.mvvmfilms.service.api.model.ConfigurationResponse;
+import com.jla.mvvmfilms.service.api.model.PopularFilmsResponse;
 
 import retrofit.http.GET;
 import retrofit.http.Query;

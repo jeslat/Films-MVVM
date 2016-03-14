@@ -1,4 +1,4 @@
-package com.jla.mvvmfilms.api;
+package com.jla.mvvmfilms.service.api;
 
 import com.squareup.okhttp.OkHttpClient;
 

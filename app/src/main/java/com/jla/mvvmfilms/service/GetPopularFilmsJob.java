@@ -1,10 +1,10 @@
 package com.jla.mvvmfilms.service;
 
-import com.jla.mvvmfilms.api.TheMovieDbAdapter;
-import com.jla.mvvmfilms.api.TheMovieDbService;
-import com.jla.mvvmfilms.api.mapper.FilmResponseDataMapper;
-import com.jla.mvvmfilms.api.model.ConfigurationResponse;
-import com.jla.mvvmfilms.api.model.PopularFilmsResponse;
+import com.jla.mvvmfilms.service.api.TheMovieDbAdapter;
+import com.jla.mvvmfilms.service.api.TheMovieDbService;
+import com.jla.mvvmfilms.service.api.mapper.FilmResponseDataMapper;
+import com.jla.mvvmfilms.service.api.model.ConfigurationResponse;
+import com.jla.mvvmfilms.service.api.model.PopularFilmsResponse;
 import com.jla.mvvmfilms.model.Film;
 import com.path.android.jobqueue.Job;
 import com.path.android.jobqueue.Params;

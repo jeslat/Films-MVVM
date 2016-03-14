@@ -1,4 +1,4 @@
-package com.jla.mvvmfilms.api.model;
+package com.jla.mvvmfilms.service.api.model;
 
 public class ConfigurationResponse {
 

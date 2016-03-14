@@ -1,7 +1,7 @@
-package com.jla.mvvmfilms.api.mapper;
+package com.jla.mvvmfilms.service.api.mapper;
 
-import com.jla.mvvmfilms.api.model.FilmResponse;
-import com.jla.mvvmfilms.api.model.ImagesResponse;
+import com.jla.mvvmfilms.service.api.model.FilmResponse;
+import com.jla.mvvmfilms.service.api.model.ImagesResponse;
 import com.jla.mvvmfilms.model.Film;
 
 import java.util.ArrayList;
