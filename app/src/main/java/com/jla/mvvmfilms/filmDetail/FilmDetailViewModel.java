@@ -26,7 +26,7 @@ public class FilmDetailViewModel extends ViewModelBase {
         }
     };
 
-    public ObservableField<Film> film;
+    public ObservableField<Film> film = new ObservableField<>();
 
     public FilmDetailViewModel(FilmService filmService, Context context) {
         this.filmService = filmService;
@@ -42,7 +42,9 @@ public class FilmDetailViewModel extends ViewModelBase {
 
     private void loadFilm(Film film) {
         Handler mainHandler = new Handler(context.getMainLooper());
-        Runnable myRunnable = () -> this.film = new ObservableField<>(film);
+        Runnable myRunnable = () -> {
+            this.film.set(film);
+        };
         mainHandler.post(myRunnable);
     }
 }
