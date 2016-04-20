@@ -96,8 +96,8 @@ public class Film {
         this.title = title;
     }
 
-    public double getVoteAverage() {
-        return voteAverage;
+    public float getVoteAverage() {
+        return (float) voteAverage;
     }
 
     public void setVoteAverage(double voteAverage) {
